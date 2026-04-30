@@ -1,0 +1,120 @@
+:root {
+    --brand-light: oklch(88% 0.08 245); /* #BCE4FE */
+    --brand-dark: oklch(30% 0.15 255);  /* #022B7B */
+    --brand-accent: oklch(82% 0.18 135); /* #A6D97A */
+    --brand-neutral: oklch(15% 0.01 255); /* #101010 */
+    --brand-bg: oklch(93% 0.01 255);      /* #E6EAED */
+}
+
+/* Lenis Smooth Scroll Recommended CSS */
+html.lenis {
+    height: auto;
+}
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+body {
+    background-color: var(--brand-bg);
+    color: var(--brand-neutral);
+    font-family: 'Satoshi', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .heading-font, .logo-font {
+    font-family: 'Clash Grotesk', sans-serif;
+    text-transform: uppercase;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+}
+
+.fluid-h1 { font-size: clamp(3rem, 8vw, 7.5rem); }
+.fluid-h2 { font-size: clamp(2rem, 5vw, 4rem); }
+
+.btn-action {
+    background-color: var(--brand-dark);
+    color: white;
+    padding: 1.25rem 2.5rem;
+    font-family: 'Clash Grotesk', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.btn-action:hover {
+    background-color: var(--brand-neutral);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.data-card {
+    border: 1px solid color-mix(in oklch, var(--brand-neutral), transparent 85%);
+    background: white;
+    padding: 2.5rem;
+}
+
+.metric-value {
+    font-family: 'Clash Grotesk', sans-serif;
+    font-size: 3.5rem;
+    color: var(--brand-dark);
+    font-weight: 600;
+}
+
+.section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--brand-dark);
+    opacity: 0.6;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.grid-overlay {
+    position: absolute;
+    inset: 0;
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, color-mix(in oklch, var(--brand-dark), transparent 95%) 1px, transparent 1px),
+                      linear-gradient(to bottom, color-mix(in oklch, var(--brand-dark), transparent 95%) 1px, transparent 1px);
+    z-index: -1;
+}
+
+.accent-block {
+    background-color: var(--brand-accent);
+    height: 4px;
+    width: 60px;
+    margin-bottom: 2rem;
+}
+
+.reveal { opacity: 0; }
+
+.image-box {
+    background-color: color-mix(in oklch, var(--brand-dark), transparent 90%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.logo-placeholder {
+    width: 40px;
+    height: 40px;
+    background-color: var(--brand-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+}
